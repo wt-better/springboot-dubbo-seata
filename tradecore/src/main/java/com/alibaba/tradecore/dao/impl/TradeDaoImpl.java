@@ -19,10 +19,10 @@ public class TradeDaoImpl implements TradeDao {
 
     @Override
     public int createTrade(TradeModel tradeModel) {
-        throw new RuntimeException();
-//        final String sql = buildInsertTradeSql(tradeModel);
-//
-//        return jdbcTemplate.update(sql);
+        //throw new RuntimeException();
+        final String sql = buildInsertTradeSql(tradeModel);
+
+        return jdbcTemplate.update(sql);
     }
 
     private String buildInsertTradeSql(TradeModel tradeModel) {
